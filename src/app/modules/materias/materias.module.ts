@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MateriasRoutingModule } from './materias-routing.module';
-import { MateriasListComponent } from './materias-list/materias-list.component';
+import { MateriasListComponent } from './components/materias-list/materias-list.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { MateriasListComponent } from './materias-list/materias-list.component';
   ],
   imports: [
     CommonModule,
-    MateriasRoutingModule
+    MateriasRoutingModule,
+    SharedModule
   ]
 })
 export class MateriasModule { }

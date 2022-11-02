@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlunosListComponent implements OnInit {
 
+  imgLogo: string = '../../../../../assets/prestech-logo-white.svg';
+  imgSrcAlunos: string = '../../../../../assets/alunos-white.svg';
+  imgSrcProfessores: string = '../../../../../assets/professores-white.svg'
+  imgSrcMaterias: string = '../../../../../assets/materias-white.svg'
+  imgSrcSalas: string = '../../../../../assets/salas-white.svg'
+  mouseOver: boolean = true;
   constructor() { }
 
   ngOnInit(): void {

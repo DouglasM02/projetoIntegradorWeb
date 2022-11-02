@@ -1,0 +1,40 @@
+.text-header {
+  font-size: 0.875rem;
+  color: #fff;
+
+}
+
+.menu-item {
+  height: 5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 3% 0;
+  overflow: hidden;
+}
+
+.menu-item:hover {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.menu-item>img {
+  width: 3rem !important;
+}
+
+.menu-item:hover > * {
+  color: #222;
+}
+
+.activated {
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.activated > * {
+  color: #222;
+}
+
+.activated-img {
+  background-color: #fff;
+  height: 36px;
+  cursor: pointer;
+}
