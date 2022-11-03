@@ -1,13 +1,21 @@
+header{
+  width: 100vw;
+  height: fit-content;
+  background-color: #3f51b5;
+  padding-left: 3%;
+}
+
 .menu {
   max-width: 20%;
   background-color: #3f51b5;
-  height: 100vh;
-  width: fit-content;
+  width: 100%;
+  padding: 5;
  }
 
  .text-header-title {
    color: #fff;
    padding: 10% 0;
+   margin-left: 1.4rem;
  }
 
  .text-header {
@@ -17,6 +25,10 @@
  }
 
  .menu-logo {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: start;
    height: 6rem;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
    font-size: 2.5rem;
@@ -26,5 +38,11 @@
 
  .menu-logo>img {
    width: 4rem !important;
+ }
+
+ .menu-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
  }
 

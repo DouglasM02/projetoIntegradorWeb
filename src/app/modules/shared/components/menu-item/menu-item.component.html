@@ -1,10 +1,10 @@
-<div [class]="'row align-items-center menu-item'"
+<div [class]="active? 'row align-items-center menu-item activated':'row align-items-center menu-item'"
   (mouseover)="imgSrc = basePath+iconeHover"
   (mouseout)="imgSrc = basePath+icone"
   [routerLink]="link"
 >
-    <img [src]="active && mouseOver? basePath+iconeHover: imgSrc" [class]="active && mouseOver ? 'col-2 activated-img':'col-2'" >
-    <div class="text-header col" [hidden]="mouseOver">
+    <img [src]="active? basePath+iconeHover: imgSrc" [class]="active ? 'col-2 activated-img':'col-2'" >
+    <div class="text-header col">
       {{texto}}
     </div>
 </div>

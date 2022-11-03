@@ -1,41 +1,82 @@
-<div class="row align-items-start p-3 menu"
+<!-- <div class="row align-items-start p-3 menu"
   (mouseover)="mouseOver = false"
   (mouseout)="mouseOver = true"
 >
-  <div class="column p-2">
+  <div class="row p-2">
     <div class="row align-items-center menu-logo">
       <img [src]="imgLogo" class="col-2" >
       <div class="text-header-title col mb-2 pr-2" [hidden]="mouseOver">
         PRESTECH
       </div>
     </div>
-    <app-menu-item
-    [icone]="'alunos-white.svg'"
-    [iconeHover]="'alunos-black.svg'"
-    [link]="'/alunos'"
-    [mouseOver]="mouseOver"
-    [texto]="'alunos'"
-    ></app-menu-item>
-    <app-menu-item
-    [icone]="'professores-white.svg'"
-    [iconeHover]="'professores-black.svg'"
-    [link]="'/professores'"
-    [mouseOver]="mouseOver"
-    [texto]="'professores'"
-    ></app-menu-item>
-    <app-menu-item
-    [icone]="'materias-white.svg'"
-    [iconeHover]="'materias-black.svg'"
-    [link]="'/materias'"
-    [mouseOver]="mouseOver"
-    [texto]="'materias'"
-    ></app-menu-item>
-    <app-menu-item
-    [icone]="'salas-white.svg'"
-    [iconeHover]="'salas-black.svg'"
-    [link]="'/salas'"
-    [mouseOver]="mouseOver"
-    [texto]="'salas'"
-    ></app-menu-item>
+    <div class="row">
+
+      <app-menu-item
+      [icone]="'alunos-white.svg'"
+      [iconeHover]="'alunos-black.svg'"
+      [link]="'/alunos'"
+      [mouseOver]="mouseOver"
+      [texto]="'alunos'"
+      ></app-menu-item>
+      <app-menu-item
+      [icone]="'professores-white.svg'"
+      [iconeHover]="'professores-black.svg'"
+      [link]="'/professores'"
+      [mouseOver]="mouseOver"
+      [texto]="'professores'"
+      ></app-menu-item>
+      <app-menu-item
+      [icone]="'materias-white.svg'"
+      [iconeHover]="'materias-black.svg'"
+      [link]="'/materias'"
+      [mouseOver]="mouseOver"
+      [texto]="'materias'"
+      ></app-menu-item>
+      <app-menu-item
+      [icone]="'salas-white.svg'"
+      [iconeHover]="'salas-black.svg'"
+      [link]="'/salas'"
+      [mouseOver]="mouseOver"
+      [texto]="'salas'"
+      ></app-menu-item>
+    </div>
   </div>
-</div>
+</div> -->
+<header>
+  <div class="menu-logo">
+    <img [src]="imgLogo" >
+    <div class="text-header-title">
+      PRESTECH
+    </div>
+  </div>
+  <div class="menu-items">
+    <app-menu-item
+      [icone]="'alunos-white.svg'"
+      [iconeHover]="'alunos-black.svg'"
+      [link]="'/alunos'"
+      [mouseOver]="false"
+      [texto]="'alunos'"
+      ></app-menu-item>
+      <app-menu-item
+      [icone]="'professores-white.svg'"
+      [iconeHover]="'professores-black.svg'"
+      [link]="'/professores'"
+      [mouseOver]="false"
+      [texto]="'professores'"
+      ></app-menu-item>
+      <app-menu-item
+      [icone]="'materias-white.svg'"
+      [iconeHover]="'materias-black.svg'"
+      [link]="'/materias'"
+      [mouseOver]="false"
+      [texto]="'materias'"
+      ></app-menu-item>
+      <app-menu-item
+      [icone]="'salas-white.svg'"
+      [iconeHover]="'salas-black.svg'"
+      [link]="'/salas'"
+      [mouseOver]="false"
+      [texto]="'salas'"
+      ></app-menu-item>
+  </div>
+</header>
