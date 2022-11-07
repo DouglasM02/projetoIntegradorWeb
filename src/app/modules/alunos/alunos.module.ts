@@ -9,6 +9,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CadastrarAlunoComponent } from './components/modals/cadastrar-aluno/cadastrar-aluno.component';
 import { DeletarAlunoComponent } from './components/modals/deletar-aluno/deletar-aluno.component';
 import { EditarAlunoComponent } from './components/modals/editar-aluno/editar-aluno.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { EditarAlunoComponent } from './components/modals/editar-aluno/editar-al
     CommonModule,
     AlunosRoutingModule,
     SharedModule,
-    MatDialogModule
+    MatDialogModule,
+    NgxMaskModule.forChild()
   ]
 })
 export class AlunosModule { }
