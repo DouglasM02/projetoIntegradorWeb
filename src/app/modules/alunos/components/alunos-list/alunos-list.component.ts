@@ -43,7 +43,7 @@ export class AlunosListComponent implements OnInit {
   openDeletar(): void {
     this.dialog.open(DeletarAlunoComponent,{
       width: "500px",
-      height: "180px",
+      height: "190px",
       disableClose: true
     })
     .afterClosed()
