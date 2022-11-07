@@ -1,0 +1,24 @@
+td {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #222;
+  font-weight: 500;
+}
+
+th {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:#3f51b5;
+}
+
+.btn-cadastrar {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #3f51b5;
+  color:#fff;
+}
+
+.icon {
+  margin-right: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+}

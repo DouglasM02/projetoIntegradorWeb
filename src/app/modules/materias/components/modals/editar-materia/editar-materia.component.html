@@ -1,0 +1,26 @@
+<h2>
+  Cadastro de Materia
+</h2>
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="Nome">Nome</span>
+  <input type="text" class="form-control" placeholder="Nome da matéria" aria-label="Nome" aria-describedby="Nome">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="Professor">Professor</span>
+  <select class="form-select" aria-label="Professor" aria-describedby="Professor">
+    <option value="" selected></option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+  </select>
+</div>
+
+<div class="d-flex justify-content-end buttons">
+  <button class="btn btn-primary" (click)="close(false)">
+    Fechar
+  </button>
+  <button class="btn btn-success" [disabled]="!FieldsNotNull" (click)="close(true)">
+    Cadastrar
+  </button>
+
+</div>
