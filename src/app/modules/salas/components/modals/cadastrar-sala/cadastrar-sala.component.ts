@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cadastrar-sala',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastrarSalaComponent implements OnInit {
 
-  constructor() { }
+  FieldsNotNull: boolean = false;
+
+  constructor(public dialogRef: MatDialogRef<CadastrarSalaComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  close(close:boolean) {
+    this.dialogRef.close(close);
   }
 
 }

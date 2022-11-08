@@ -1,1 +1,18 @@
-<p>cadastrar-sala works!</p>
+<h2>
+  Cadastro de Sala
+</h2>
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="Nome">Nome</span>
+  <input type="text" class="form-control" placeholder="Nome da sala" aria-label="Nome" aria-describedby="Nome">
+</div>
+
+<div class="d-flex justify-content-end buttons">
+  <button class="btn btn-primary" (click)="close(false)">
+    Fechar
+  </button>
+  <button class="btn btn-success" [disabled]="!FieldsNotNull" (click)="close(true)">
+    Cadastrar
+  </button>
+
+</div>
