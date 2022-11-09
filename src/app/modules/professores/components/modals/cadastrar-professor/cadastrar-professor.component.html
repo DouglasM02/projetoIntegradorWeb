@@ -19,7 +19,7 @@
 
 <div class="input-group mb-3">
   <span class="input-group-text" id="DataNascimento">Data de Nascimento</span>
-  <input type="text" class="form-control" placeholder="00/00/0000" mask="d0/M0/0000" aria-label="Data de nascimento" aria-describedby="DataNascimento">
+  <input type="text" class="form-control" placeholder="00/00/0000" mask="d0/M0/0000" [dropSpecialCharacters]="false" aria-label="Data de nascimento" aria-describedby="DataNascimento">
 </div>
 <div class="input-group mb-3">
   <span class="input-group-text" id="Sala">Matéria</span>

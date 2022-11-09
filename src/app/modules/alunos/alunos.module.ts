@@ -10,6 +10,8 @@ import { CadastrarAlunoComponent } from './components/modals/cadastrar-aluno/cad
 import { DeletarAlunoComponent } from './components/modals/deletar-aluno/deletar-aluno.component';
 import { EditarAlunoComponent } from './components/modals/editar-aluno/editar-aluno.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import { NgxMaskModule } from 'ngx-mask';
     AlunosRoutingModule,
     SharedModule,
     MatDialogModule,
+    HttpClientModule,
+    FormsModule,
     NgxMaskModule.forChild()
   ]
 })

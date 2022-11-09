@@ -27,18 +27,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            teste
+        <tr *ngFor="let aluno of alunos">
+          <td >
+            {{aluno.nome}}
           </td>
-          <td>
-            teste
+          <td >
+            {{aluno.dataNascimento}}
           </td>
-          <td>
-            teste
+          <td >
+            {{aluno.cpf | mask: '000.000.000-00'}}
           </td>
-          <td>
-            teste
+          <td >
+            {{aluno.sala? aluno.sala:null}}
           </td>
           <td>
             <app-icons icon="edit-icon.svg" [width]="'18px'" [height]="'18px'" class="icon pointer" (click)="openEditar()"></app-icons>

@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 const maskConfigFunction: () => Partial<IConfig> = () => {
   return {
@@ -23,7 +25,9 @@ const maskConfigFunction: () => Partial<IConfig> = () => {
     NgbModule,
     BrowserAnimationsModule,
     RouterModule,
-    NgxMaskModule.forRoot(maskConfigFunction)
+    HttpClientModule,
+    FormsModule,
+    NgxMaskModule.forRoot(maskConfigFunction),
   ],
   providers: [],
   bootstrap: [AppComponent]
