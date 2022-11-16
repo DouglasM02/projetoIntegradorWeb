@@ -51,15 +51,20 @@ export class AlunosListComponent implements OnInit {
     })
   }
 
-  openEditar(): void {
+  openEditar(alunoId: number): void {
     this.dialog.open(EditarAlunoComponent,{
       width: "500px",
       height: "370px",
+      data:{
+        alunoId
+      },
       disableClose: true
     })
     .afterClosed()
     .subscribe(response => {
-      if(response) {}
+      if(response) {
+        this.getAlunos()
+      }
     })
   }
 

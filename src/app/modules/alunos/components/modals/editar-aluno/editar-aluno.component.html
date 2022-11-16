@@ -4,17 +4,18 @@
 
 <div class="input-group mb-3">
   <span class="input-group-text" id="Nome">Nome</span>
-  <input type="text" class="form-control" placeholder="Nome do aluno" aria-label="Nome" aria-describedby="Nome">
+  <input #nome="ngModel"[(ngModel)]="aluno.nome" type="text" class="form-control" placeholder="Nome do aluno" aria-label="Nome" aria-describedby="Nome">
 </div>
 
 <div class="input-group mb-3">
   <span class="input-group-text" id="CPF">CPF</span>
-  <input type="text" class="form-control" placeholder="CPF do aluno (Digite apenas números)" mask="000.000.000-00" aria-label="CPF" aria-describedby="CPF">
+  <input #cpf="ngModel"[(ngModel)]="aluno.cpf" type="text" class="form-control" placeholder="CPF do aluno (Digite apenas números)" mask="000.000.000-00" aria-label="CPF" aria-describedby="CPF">
 </div>
 
 <div class="input-group mb-3">
   <span class="input-group-text" id="DataNascimento">Data de Nascimento</span>
-  <input type="text" class="form-control" placeholder="00/00/0000" mask="d0/M0/0000" aria-label="Data de nascimento" aria-describedby="DataNascimento">
+  <input #dataNascimento="ngModel"[(ngModel)]="aluno.dataNascimento" type="text" class="form-control" placeholder="00/00/0000" mask="d0/M0/0000" aria-label="Data de nascimento" aria-describedby="DataNascimento" [dropSpecialCharacters]="false"
+  >
 </div>
 <div class="input-group mb-3">
   <span class="input-group-text" id="Sala">Sala</span>
@@ -29,7 +30,7 @@
   <button class="btn btn-primary" (click)="close(false)">
     Fechar
   </button>
-  <button class="btn btn-warning" [disabled]="!FieldsNotNull" (click)="close(true)">
+  <button class="btn btn-warning" [disabled]="FieldsNotNull" (click)="update()">
     Editar
   </button>
 

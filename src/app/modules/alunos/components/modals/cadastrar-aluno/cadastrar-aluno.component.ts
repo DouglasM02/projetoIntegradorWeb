@@ -30,6 +30,7 @@ export class CadastrarAlunoComponent implements OnInit {
     this.alunoService.create(this.aluno).subscribe(res => {
       if(res) {
         console.log(res)
+        this.FieldsNotNull = false;
         this.close(true)
       }
     },

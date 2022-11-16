@@ -41,7 +41,7 @@
             {{aluno.sala? aluno.sala:null}}
           </td>
           <td>
-            <app-icons icon="edit-icon.svg" [width]="'18px'" [height]="'18px'" class="icon pointer" (click)="openEditar()"></app-icons>
+            <app-icons icon="edit-icon.svg" [width]="'18px'" [height]="'18px'" class="icon pointer" (click)="openEditar(aluno.id)"></app-icons>
             <app-icons icon="delete-icon.svg" [width]="'18px'" [height]="'18px'" (click)="openDeletar()" class="pointer"></app-icons>
           </td>
         </tr>
