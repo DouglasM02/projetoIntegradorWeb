@@ -52,10 +52,13 @@ export class ProfessoresListComponent implements OnInit {
     })
   }
 
-  openEditar(): void {
+  openEditar(professorId: number): void {
     this.dialog.open(EditarProfessorComponent,{
       width: "500px",
       height: "430px",
+      data:{
+        professorId
+      },
       disableClose: true
     })
     .afterClosed()
@@ -66,10 +69,13 @@ export class ProfessoresListComponent implements OnInit {
     })
   }
 
-  openDeletar(): void {
+  openDeletar(professorId: number): void {
     this.dialog.open(DeletarProfessorComponent,{
       width: "500px",
       height: "190px",
+      data:{
+        professorId
+      },
       disableClose: true
     })
     .afterClosed()

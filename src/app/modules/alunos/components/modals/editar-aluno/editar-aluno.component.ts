@@ -40,6 +40,7 @@ export class EditarAlunoComponent implements OnInit {
   }
 
   update(){
+    this.FieldsNotNull = true;
     console.log(this.aluno.dataNascimento)
     let date = this.aluno.dataNascimento.split("/");
     this.aluno.dataNascimento = `${date[2]}-${date[1]}-${date[0]}`
@@ -47,6 +48,7 @@ export class EditarAlunoComponent implements OnInit {
     this.alunoService.update(this.aluno).subscribe(
       res => {
         if(res){
+          this.FieldsNotNull = false;
           console.log(res)
           this.close(true)
         }
