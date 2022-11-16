@@ -68,15 +68,20 @@ export class AlunosListComponent implements OnInit {
     })
   }
 
-  openDeletar(): void {
+  openDeletar(alunoId: number): void {
     this.dialog.open(DeletarAlunoComponent,{
       width: "500px",
       height: "190px",
+      data:{
+        alunoId
+      },
       disableClose: true
     })
     .afterClosed()
     .subscribe(response => {
-      if(response) {}
+      if(response) {
+        this.getAlunos()
+      }
     })
   }
 
