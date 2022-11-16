@@ -9,6 +9,7 @@ import { NgxMaskModule } from 'ngx-mask';
 import { CadastrarProfessorComponent } from './components/modals/cadastrar-professor/cadastrar-professor.component';
 import { DeletarProfessorComponent } from './components/modals/deletar-professor/deletar-professor.component';
 import { EditarProfessorComponent } from './components/modals/editar-professor/editar-professor.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { EditarProfessorComponent } from './components/modals/editar-professor/e
     ProfessoresRoutingModule,
     SharedModule,
     MatDialogModule,
+    FormsModule,
     NgxMaskModule.forChild()
   ]
 })
