@@ -1,8 +1,10 @@
+import { MateriaServiceService } from './../../services/materia-service.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CadastrarMateriaComponent } from '../modals/cadastrar-materia/cadastrar-materia.component';
 import { DeletarMateriaComponent } from '../modals/deletar-materia/deletar-materia.component';
 import { EditarMateriaComponent } from '../modals/editar-materia/editar-materia.component';
+import MateriaModel from '../../models/Materia.model';
 
 @Component({
   selector: 'app-materias-list',
@@ -11,9 +13,25 @@ import { EditarMateriaComponent } from '../modals/editar-materia/editar-materia.
 })
 export class MateriasListComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  materias!: MateriaModel[];
+
+  constructor(
+    public dialog: MatDialog,
+    private materiaService: MateriaServiceService
+  ) { }
 
   ngOnInit(): void {
+    this.getMaterias();
+  }
+
+  getMaterias() {
+    this.materiaService.getAll().subscribe(
+      res => {
+        if(res) {
+          this.materias = res
+        }
+      }
+    )
   }
 
   openCadastrar(): void {
@@ -24,31 +42,43 @@ export class MateriasListComponent implements OnInit {
     })
     .afterClosed()
     .subscribe(response => {
-      if(response) {}
+      if(response) {
+        this.getMaterias()
+      }
     })
   }
 
-  openEditar(): void {
+  openEditar(materiaId: number): void {
     this.dialog.open(EditarMateriaComponent,{
       width: "500px",
       height: "370px",
+      data: {
+        materiaId
+      },
       disableClose: true
     })
     .afterClosed()
     .subscribe(response => {
-      if(response) {}
+      if(response) {
+        this.getMaterias()
+      }
     })
   }
 
-  openDeletar(): void {
+  openDeletar(materiaId: number): void {
     this.dialog.open(DeletarMateriaComponent,{
       width: "500px",
       height: "190px",
+      data: {
+        materiaId
+      },
       disableClose: true
     })
     .afterClosed()
     .subscribe(response => {
-      if(response) {}
+      if(response) {
+        this.getMaterias()
+      }
     })
   }
 

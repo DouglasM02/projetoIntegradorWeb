@@ -9,6 +9,7 @@ import { DeletarMateriaComponent } from './components/modals/deletar-materia/del
 import { EditarMateriaComponent } from './components/modals/editar-materia/editar-materia.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgxMaskModule } from 'ngx-mask';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { NgxMaskModule } from 'ngx-mask';
     MateriasRoutingModule,
     SharedModule,
     MatDialogModule,
+    FormsModule,
     NgxMaskModule.forChild()
   ]
 })
