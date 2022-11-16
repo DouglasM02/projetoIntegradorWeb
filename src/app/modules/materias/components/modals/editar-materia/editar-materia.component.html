@@ -4,14 +4,13 @@
 
 <div class="input-group mb-3">
   <span class="input-group-text" id="Nome">Nome</span>
-  <input type="text" class="form-control" placeholder="Nome da matéria" aria-label="Nome" aria-describedby="Nome">
+  <input #nome="ngModel"[(ngModel)]="materia.nome" type="text" class="form-control" placeholder="Nome da matéria" aria-label="Nome" aria-describedby="Nome">
 </div>
 <div class="input-group mb-3">
   <span class="input-group-text" id="Professor">Professor</span>
-  <select class="form-select" aria-label="Professor" aria-describedby="Professor">
-    <option value="" selected></option>
-    <option value="1">1</option>
-    <option value="2">2</option>
+  <select class="form-select" aria-label="Professor" aria-describedby="Professor" [(ngModel)]="materia.professorId">
+    <option [value]="0" default selected></option>
+    <option [value]="professor.id" *ngFor="let professor of professores">{{professor.nome}}</option>
   </select>
 </div>
 
@@ -19,8 +18,8 @@
   <button class="btn btn-primary" (click)="close(false)">
     Fechar
   </button>
-  <button class="btn btn-success" [disabled]="!FieldsNotNull" (click)="close(true)">
-    Cadastrar
+  <button class="btn btn-warning" [disabled]="!materia.nome || FieldsNotNull" (click)="update()">
+    Editar
   </button>
 
 </div>

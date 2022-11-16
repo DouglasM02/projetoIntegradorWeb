@@ -13,6 +13,9 @@
             Nome
           </th>
           <th scope="col">
+            Professor
+          </th>
+          <th scope="col">
             Ações
           </th>
         </tr>
@@ -21,6 +24,9 @@
         <tr *ngFor="let materia of materias">
           <td>
             {{materia.nome}}
+          </td>
+          <td>
+            {{materia.professor?.nome}}
           </td>
           <td>
             <app-icons icon="edit-icon.svg" [width]="'18px'" [height]="'18px'" class="icon pointer" (click)="openEditar(materia.id)"></app-icons>

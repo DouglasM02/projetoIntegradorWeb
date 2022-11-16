@@ -29,6 +29,8 @@ export class MateriasListComponent implements OnInit {
       res => {
         if(res) {
           this.materias = res
+
+          console.log(this.materias)
         }
       }
     )
