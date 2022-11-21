@@ -1,8 +1,10 @@
+import { SalaServiceService } from './../../services/sala-service.service';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CadastrarSalaComponent } from '../modals/cadastrar-sala/cadastrar-sala.component';
 import { DeletarSalaComponent } from '../modals/deletar-sala/deletar-sala.component';
 import { EditarSalaComponent } from '../modals/editar-sala/editar-sala.component';
+import SalaModel from '../../models/Sala.model';
 
 @Component({
   selector: 'app-salas-list',
@@ -11,9 +13,25 @@ import { EditarSalaComponent } from '../modals/editar-sala/editar-sala.component
 })
 export class SalasListComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  salas: SalaModel[] = [];
+
+  constructor(
+    public dialog: MatDialog,
+    private salaService: SalaServiceService
+  ) { }
 
   ngOnInit(): void {
+    this.getSalas();
+  }
+
+  getSalas(){
+    this.salaService.getAll().subscribe(
+      res => {
+        if(res){
+          this.salas = res
+        }
+      }
+    )
   }
 
   openCadastrar(): void {
@@ -24,7 +42,9 @@ export class SalasListComponent implements OnInit {
     })
     .afterClosed()
     .subscribe(response => {
-      if(response) {}
+      if(response) {
+        this.getSalas()
+      }
     })
   }
 
@@ -36,7 +56,9 @@ export class SalasListComponent implements OnInit {
     })
     .afterClosed()
     .subscribe(response => {
-      if(response) {}
+      if(response) {
+        this.getSalas()
+      }
     })
   }
 
@@ -48,7 +70,9 @@ export class SalasListComponent implements OnInit {
     })
     .afterClosed()
     .subscribe(response => {
-      if(response) {}
+      if(response) {
+        this.getSalas()
+      }
     })
   }
 

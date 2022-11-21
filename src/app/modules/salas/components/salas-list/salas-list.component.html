@@ -10,7 +10,10 @@
       <thead>
         <tr>
           <th scope="col">
-            Nome
+            Id
+          </th>
+          <th scope="col">
+            Código
           </th>
           <th scope="col">
             Ações
@@ -18,9 +21,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr *ngFor="let sala of salas">
           <td>
-            teste
+            {{sala.id}}
+          </td>
+          <td>
+            {{sala.codigo}}
           </td>
           <td>
             <app-icons icon="edit-icon.svg" [width]="'18px'" [height]="'18px'" class="icon pointer" (click)="openEditar()"></app-icons>

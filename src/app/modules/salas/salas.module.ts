@@ -9,6 +9,8 @@ import { DeletarSalaComponent } from './components/modals/deletar-sala/deletar-s
 import { EditarSalaComponent } from './components/modals/editar-sala/editar-sala.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NgxMaskModule } from 'ngx-mask';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +25,8 @@ import { NgxMaskModule } from 'ngx-mask';
     SalasRoutingModule,
     SharedModule,
     MatDialogModule,
+    HttpClientModule,
+    FormsModule,
     NgxMaskModule.forChild()
   ]
 })
