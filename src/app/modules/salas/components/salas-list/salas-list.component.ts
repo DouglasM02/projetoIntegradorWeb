@@ -48,10 +48,13 @@ export class SalasListComponent implements OnInit {
     })
   }
 
-  openEditar(): void {
+  openEditar(salaId: number): void {
     this.dialog.open(EditarSalaComponent,{
       width: "500px",
       height: "370px",
+      data: {
+        salaId
+      },
       disableClose: true
     })
     .afterClosed()
@@ -62,10 +65,13 @@ export class SalasListComponent implements OnInit {
     })
   }
 
-  openDeletar(): void {
+  openDeletar(salaId: number): void {
     this.dialog.open(DeletarSalaComponent,{
       width: "500px",
       height: "190px",
+      data: {
+        salaId
+      },
       disableClose: true
     })
     .afterClosed()

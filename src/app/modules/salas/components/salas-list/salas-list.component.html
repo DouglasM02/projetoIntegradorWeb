@@ -29,8 +29,8 @@
             {{sala.codigo}}
           </td>
           <td>
-            <app-icons icon="edit-icon.svg" [width]="'18px'" [height]="'18px'" class="icon pointer" (click)="openEditar()"></app-icons>
-            <app-icons icon="delete-icon.svg" [width]="'18px'" [height]="'18px'" (click)="openDeletar()" class="pointer"></app-icons>
+            <app-icons icon="edit-icon.svg" [width]="'18px'" [height]="'18px'" class="icon pointer" (click)="openEditar(sala.id)"></app-icons>
+            <app-icons icon="delete-icon.svg" [width]="'18px'" [height]="'18px'" (click)="openDeletar(sala.id)" class="pointer"></app-icons>
           </td>
         </tr>
       </tbody>
