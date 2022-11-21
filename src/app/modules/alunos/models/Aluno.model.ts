@@ -1,9 +1,10 @@
+import SalaModel from 'src/app/modules/salas/models/Sala.model';
 class AlunoModel {
   id!: number;
   nome!: string;
   cpf!: string;
   dataNascimento!: string;
-  sala!: string | null;
+  sala!: SalaModel | null;
   salaId!: string | null;
 }
 

@@ -18,11 +18,10 @@
   >
 </div>
 <div class="input-group mb-3">
-  <span class="input-group-text" id="Sala">Sala</span>
-  <select class="form-select" aria-label="Sala" aria-describedby="Sala">
-    <option value="" selected></option>
-    <option value="1">1</option>
-    <option value="2">2</option>
+  <span class="input-group-text" id="Professor">Sala</span>
+  <select class="form-select" aria-label="Sala" aria-describedby="Sala" [(ngModel)]="aluno.salaId">
+    <option [value]="0" default selected></option>
+    <option [value]="sala.id" *ngFor="let sala of salas">{{sala.codigo}}</option>
   </select>
 </div>
 

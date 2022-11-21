@@ -1,7 +1,9 @@
+import { SalaServiceService } from './../../../../salas/services/sala-service.service';
 import { AlunoServiceService } from './../../../services/aluno-service.service';
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import UpdateAlunoModel from '../../../models/UpdateAluno.model';
+import SalaModel from 'src/app/modules/salas/models/Sala.model';
 
 @Component({
   selector: 'app-editar-aluno',
@@ -10,6 +12,8 @@ import UpdateAlunoModel from '../../../models/UpdateAluno.model';
 })
 export class EditarAlunoComponent implements OnInit {
 
+  salas!: SalaModel[]
+
   aluno: UpdateAlunoModel = new UpdateAlunoModel();
 
   FieldsNotNull: boolean = false;
@@ -17,11 +21,23 @@ export class EditarAlunoComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<EditarAlunoComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private alunoService: AlunoServiceService
+    private alunoService: AlunoServiceService,
+    private salaService: SalaServiceService
   ) { }
 
   ngOnInit(): void {
+    this.getSalas();
     this.getAlunoById();
+  }
+
+  getSalas(){
+    this.salaService.getAll().subscribe(
+      res => {
+        if(res){
+          this.salas = res
+        }
+      }
+    )
   }
 
   getAlunoById(){

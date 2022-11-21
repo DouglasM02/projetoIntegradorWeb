@@ -38,7 +38,7 @@
             {{aluno.cpf | mask: '000.000.000-00'}}
           </td>
           <td >
-            {{aluno.sala? aluno.sala:null}}
+            {{aluno.sala? aluno.sala.codigo:null}}
           </td>
           <td>
             <app-icons icon="edit-icon.svg" [width]="'18px'" [height]="'18px'" class="icon pointer" (click)="openEditar(aluno.id)"></app-icons>
